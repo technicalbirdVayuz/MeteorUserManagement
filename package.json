@@ -1,0 +1,16 @@
+{
+  "name": "nomad_meteor",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+     "precommit": "grunt lint",
+      "prepush": "echo Yeaah!"
+    },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "meteor-node-stubs": "^0.4.1"
+  }
+}

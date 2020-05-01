@@ -1,0 +1,14 @@
+
+.pointer{
+	cursor: pointer !important;
+}
+.display_none_class{
+	display: none !important;
+}
+.bg-green{
+	background-color: #98aa3a;
+    color: #fff !important;
+}
+.color-gray{
+	    color: #333 !important;
+}

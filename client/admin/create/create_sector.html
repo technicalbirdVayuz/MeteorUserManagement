@@ -1,0 +1,67 @@
+<template name="create_sector">
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid width_container">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-6 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">Add Sector</h3>
+                    <ol class="breadcrumb bc-colored">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Add Sector</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <!-- Row -->
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-12 col-xlg-912 col-md-12">
+                    <div class="card padding-top-25">
+                        <div class="card-block">
+                            <form class="form-material floating-labels">        
+                                <div class="form-group error col-lg-12 col-sm-12 col-xs-12">
+                                    <input type="text-center" autocomplete="off" id="sector_name" class="form-control form-control-line" data-toggle="tooltip" data-placement="bottom" title="Add Sector" required>
+                                    <span class="bar"></span>
+                                    <label for="sector_name">Sector Name</label>
+                                    <p id="invalid_industry_type" class="invalid_feedback display_hidden">Please enter sector name</p>
+                                </div>
+                                <div class="form-group text-right col-lg-12 col-sm-12 col-xs-12">
+                                    <a href="/sectors_listing" class="btn btn-cancel" id="">Cancel</a>
+                                    <button class="btn btn-primary-admin " id="add_sector" type="button">
+                                        <span class="spinner-border spinner-border-sm display_none_class" id="loader_span" role="status" aria-hidden="true"></span>
+                                        <span>Add Sector</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+            </div>
+            <!-- Row -->
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    
+</template>

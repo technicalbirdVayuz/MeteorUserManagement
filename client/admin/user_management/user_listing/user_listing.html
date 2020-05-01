@@ -1,0 +1,88 @@
+<template name="user_listing">
+   <div class="page-wrapper ">
+      <!-- ============================================================== -->
+      <!-- Container fluid  -->
+      <!-- ============================================================== -->
+      <div class="container-fluid width_container">
+         <!-- ============================================================== -->
+         <!-- Bread crumb and right sidebar toggle -->
+         <!-- ============================================================== -->
+         <div class="row page-titles">
+            <div class="col-md-6 col-8 align-self-center">
+               <h3 class="text-themecolor mb-0 mt-0">User Listing</h3>
+               <ol class="breadcrumb bc-colored">
+                  <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                  <li class="breadcrumb-item active">User Listing</li>
+               </ol>
+            </div>
+            <div class="col-md-6 col-8 align-self-center  pull-right">
+               <a href="/admin/create-user" class="btn pull-right btn-primary-admin pointer"><span>Create User</span></a>
+            </div>
+         </div>
+         <!-- ============================================================== -->
+         <!-- End Bread crumb and right sidebar toggle -->
+         <!-- ============================================================== -->
+         <!-- ============================================================== -->
+         <!-- Start Page Content -->
+         <!-- ============================================================== -->
+         <div class="row" id="foot">
+            <div class="col-12">
+               <div class="card">
+                  <div class=""> 
+                     <div class="table-responsive  admin">
+                        <table id="demo-foo-addrow" class="table table-bordered table-hover contact-list" data-paging="true" data-paging-size="7">
+                           <thead>
+                              <tr>
+                                 <th>#</th>
+                                 <th>User Name</th>
+                                 <th>Email</th>
+                                 <th>Added On</th>
+                                 <th>Status</th>
+                                 <th>Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              {{#each fetch_all_user}}
+                              <tr>
+                                 <td>{{ @index 1}}</td>
+                                 <td>
+                                    {{name}}
+                                 </td>
+                                 <td>
+                                    {{email}}
+                                 </td>
+                                 <td>
+                                    {{created_at}}
+                                 </td>
+                                 <td>
+                                  {{#if is_active}}
+                                    Active
+                                    {{else}}
+                                    Inactive
+                                    {{/if}}
+                                 </td>
+                                 <td>
+                                    <span class="label label-info padding-10 edit_user pointer">Edit</span>
+                                    {{#if is_active}}
+                                    <span class="label label-danger pointer padding-10 m-b-10 change_status">Deactivate </span> 
+                                    {{else}}
+                                    <span class="label label-success pointer padding-10 change_status">Activate </span> 
+                                    {{/if}}
+                                 </td>
+                              </tr>
+                              {{else}}
+                              <p class="col-md-12 padding-top-10"> No Data Found</p>
+                              {{/each}}
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- ============================================================== -->
+         <!-- End Right sidebar -->
+         <!-- ============================================================== -->
+      </div>
+   </div>
+</template>

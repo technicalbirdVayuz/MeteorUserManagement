@@ -1,0 +1,79 @@
+<template name="create_user">
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid width_container">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-6 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">User</h3>
+                    <ol class="breadcrumb bc-colored">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Create User</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <!-- Row -->
+            <div class="row"> 
+                <div class="col-lg-12 col-xlg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-block padding-top-25">
+                            <form class=" form-material floating-labels" autocomplete="off" id="myForm">
+                                <div class="form-group col-lg-12 col-sm-12 col-xs-12 pull-left">
+                                    <input type="text" class="form-control form-control-line" data-toggle="tooltip" data-placement="bottom" title="Enter User Name!!" id="user_name" required >
+                                    <span class="bar"></span>
+                                    <label for="user_name" >Name</label>
+                                    <p id="invalid_name" class="invalid_feedback display_hidden" >Please enter name</p>
+                                </div>
+                                
+                                <div class="form-group col-lg-6 col-sm-6 col-xs-12 pull-left" id="email_div">
+                                    <input type="email" class="form-control form-control-line" id="example_email" required>
+                                    <span class="bar"></span>
+                                    <label for="example-email">Email</label>
+                                    <p id="email_error" class="display_none_class" >Please enter email id</p>
+                                    <!-- <p id="email_error" class="display_none_class" >Please enter email id</p> -->
+                                </div>
+                               
+                                <div class="form-group col-lg-12 col-sm-12 col-xs-12 pull-right">
+                                    <div class="col-sm-12 text-right">
+                                        <a href="/admin/user-listing" class="btn btn-cancel" id="">Cancel</a>
+                                        <button class="btn btn-primary-admin" id="save_user">
+                                            <span>
+                                                <span class="spinner-border spinner-border-sm display_none_class" id="loader_span" role="status" aria-hidden="true">
+                                                </span>
+                                                Create User
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+            </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+        </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+    </div>
+</template>
